@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+    * body {
+background-color: #734b6d ;
+  margin: 0;
+  padding: 0;
+  padding-top: 70px;
+  text-align: center;
+    }
+    #btn {
+        height: 40px;
+        width: 60px;
+        font-size: larger;
+        font-weight: 800;
+       color: #faf9fa;
+       background-color: black;
+    }
+    #name{
+       box-sizing: border-box;
+        margin: auto;
+        margin-top: 30px;
+        margin-right: 540px;
+        border: 1px solid black;
+        width: 190px;
+        height: 50px;
+        padding-top: 15px;
+        font-size: large;
+        color: #faf9fa;
+        background-color: rgb(10, 10, 10);
+    }
+</style>
+<body>
+    <img id="Image"  src="./img/off.png" height="400px" width="250px">
+        <button type="button" id="btn" onclick="turnOnOff()">ON</button>
+        <div id="name">Design by Rizwan Ali</div>
+	<script>
+		function turnOnOff() {
+			var image = document.getElementById('Image');
+			if (image.src.match("off.png")){
+                image.src ="./img/on.png" 
+                document.getElementById("btn").innerText = "OFF"
+                
+                
+            }
+
+			else {
+                var image = document.getElementById('Image')
+                if (image.src.match("on.png")){
+                image.src ="./img/off.png" 
+                document.getElementById("btn").innerText = "ON"
+               
+            }
+            }
+               
+				
+		}
+	</script>
+
+
+</body>
+
+</html>
